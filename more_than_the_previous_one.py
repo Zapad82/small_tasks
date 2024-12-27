@@ -12,3 +12,13 @@
 # Программа должна вывести одно число – количество элементов списка, больших 
 # предыдущего.
 
+numbers_list = input().split(" ")
+count = 0
+
+for i in range(len(numbers_list)):
+    if i+1 == len(numbers_list):
+        break
+    else:
+        if int(numbers_list[i+1]) > int(numbers_list[i]):
+            count +=1
+print(count)
