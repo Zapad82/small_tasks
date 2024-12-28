@@ -12,3 +12,9 @@
 # Программа должна вывести элементы измененного списка с циклическим сдвигом, 
 # разделяя его элементы одним пробелом.
 
+numbers_list = input().split(" ")
+new_list = [numbers_list[len(numbers_list) - 1]]
+for i in range(0, len(numbers_list) - 1):
+    new_list.append(numbers_list[i])
+
+print(*new_list, sep=" ")
