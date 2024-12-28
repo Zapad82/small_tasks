@@ -10,3 +10,19 @@
 # Формат выходных данных
 # Программа должна вывести одно число – количество различных элементов списка.
 
+numbers_list = input().split(" ")
+new_numbers_list = []
+# переведем элементы списка из строк в числа
+for i in range(len(numbers_list)):
+    new_numbers_list.append(int(numbers_list[i]))
+
+# обозначим переменную для подсчета уникальных элементов в списке
+count = 0
+
+# с помощью функции set() идалим из списка дубли
+new_numbers_list = list(set(new_numbers_list))
+
+# подсчитаем количество элементов в списке с помощью функции len()
+count = len(new_numbers_list)
+
+print(count)
